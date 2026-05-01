@@ -26,27 +26,35 @@ const std::vector<Point2D>& Robot::getHistory() const {
 }
 
 void Robot::moveUp() {
-    int movesMade = static_cast<int>(history.size()) - 1;
-    int step = (movesMade >= 10) ? 2 : 1;
-    moveTo(x, y - step);
+    int moves = history.size() - 1;
+    if (moves >= 10)
+        moveTo(x, y - 2);
+    else
+        moveTo(x, y - 1);
 }
 
 void Robot::moveDown() {
-    int movesMade = static_cast<int>(history.size()) - 1;
-    int step = (movesMade >= 10) ? 2 : 1;
-    moveTo(x, y + step);
+    int moves = history.size() - 1;
+    if (moves >= 10)
+        moveTo(x, y + 2);
+    else
+        moveTo(x, y + 1);
 }
 
 void Robot::moveLeft() {
-    int movesMade = static_cast<int>(history.size()) - 1;
-    int step = (movesMade >= 10) ? 2 : 1;
-    moveTo(x - step, y);
+    int moves = history.size() - 1;
+    if (moves >= 10)
+        moveTo(x - 2, y);
+    else
+        moveTo(x - 1 , y);
 }
 
 void Robot::moveRight() {
-    int movesMade = static_cast<int>(history.size()) - 1;
-    int step = (movesMade >= 10) ? 2 : 1;
-    moveTo(x + step, y);
+    int moves = history.size() - 1;
+    if (moves >= 10)
+        moveTo(x + 2, y);
+    else
+        moveTo(x + 1, y);
 }
 
 void Robot::undo() {
