@@ -11,7 +11,7 @@
 
     // TODO: change ONLY the QT6 ROOT line
     // MAC: modify the username to match your username and ensure the path matches your Qt installation.
-    "Qt6_ROOT": "/Users/joeyallen/Qt/6.11.0/macos"
+    "Qt6_ROOT": "C:\\Qt\\6.11.0\\msvc2022_64"
     //WINDOWS: comment out the MAC line and uncomment the WINDOWS line, changing the path to match your Qt installation
     //"Qt6_ROOT": "C:/Qt/6.11.0/msvc2022_64"
   },
